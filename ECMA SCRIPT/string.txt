@@ -1,0 +1,47 @@
+Theme: Ecma Script 6 || JS string
+
+let number = 5;
+let text = "paste number into variable" + number;
+let text2 = "paste number into variable" + number;
+let tex3 = `paste number into variable ${number}`
+
+//----------------------------------------------------
+
+option `JS string`
+
+let func = (a) => a * 2,
+text = `its can get function number : ${func(2)}`
+
+let text = `
+    Этот текст отображается 
+    как ест учитивая пробели абзатс  всё
+`
+
+// -------------------------------------------------------
+
+String Methods
+
+text = 'lorem absed radius allquerue'
+
+text.startsWith('lor') => true  // проверка начало текст
+text.startsWith('rem', 4) => false
+
+text.endsWith('rue') => true // проверка конец текст
+text.endsWith('all', 2) => false
+
+text.includes('lorem') => true // проверка естли такого строка
+text.includes('lorem', 2) => false 
+
+text.repeat(3) // повторят текст 3 раза
+
+text.trim()     // удаляет лышний пробели
+text.trimEnd()  //удаляет лишный пробели конца
+text.trimStart()// удальяет лишный пробели начало
+
+text.padStart(6, "1234")    заполнения осталных пустих места
+text.padEnd(6, "1234")    заполнения осталных пустих места
+
+
+
+
+

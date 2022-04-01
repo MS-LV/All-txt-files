@@ -1,0 +1,116 @@
+//default option function
+    function show(a = 5, b = 7){
+        console.log(a + b)
+    }
+    show()  <----- log(12)
+
+    -----------------------
+
+    function show(a = 5, b = 7){
+        console.log(a + b)
+    }
+    show(10, 20)    <---- log(30)
+
+    --------------------------------
+
+    let as = 5;
+    let bs = 10;
+    function show(a = as, b = bs){
+        console.log(a + b)
+    }
+    show()  <------ log(15);
+
+    --------------------------------
+
+    let as = 5;
+    let bs = 15;
+    function show(a, b){
+        console.log(a + b)
+    }
+    show(as, bs);
+
+    ------------------------------
+    
+
+//strings
+    let string = '<h1>I am just string</h1>'
+    console.log(string) <------------ I am just string
+
+    ------------------------------------------
+
+    let string = "<h1>I am too just string</h1>"
+    console.log(string) <----- I am too just string
+
+    ---------------------------------------------
+
+    let a = 5;
+    let string = `Summa a = ${a ** 2}`
+    --------------------------------
+
+    methods{
+        let str = "Hello world";
+        .log(str.startsWith('Hel')) <-- true    // пробел тоже считают
+        .log(str.startsWith('llo')) <-- false
+        .log(str.endsWith('rld'))   <-- true
+        .log(str.endsWith('llo'))   <-- false
+        .log(str.includes('llo'))   <-- true
+        .log(str.includes('wrld'))  <-- false
+
+        .log(str.repeat(3)) <-- павторят на указнного число раз
+        .log(str.trim())    <-- уберет лишный отступи слева и справа
+        .log(str.trimStart())   <-- уберает лишний отступи слева
+        .log(str.trimEnd()) <-- уберает лишний отступи справа
+
+        .log(str.padStart(20, '123'))   
+            ^-- минималный длина строка заполняет лишный место подобе второй параметр
+        
+        .log(str.padEnd(20, '321')) <-- точна также но заполняет правая край
+    }
+
+// rest {
+
+    function everst(a, ...args){
+    return args.reduce((prvalue, value) => prvalue += i, 0) / args.length
+    }
+    everst(4, 3 , 5 , 4) => 3 + 5 + 4 / args.length(3) = 4;
+
+    // ...args => берет остальных аргументы и возвращает массив
+
+}
+
+
+// spread {
+    let arr = [1, 2, 3, 5, 8, 13]
+
+    let arr2 = [0, 1, ...arr, 21,34]; // коприроват с spread
+    Math.max(...arr) // найдите самый вышей номер
+}
+
+
+//destruction {
+    //Array =>
+        let arr = [1, 2, 3, 5, 8, 13]
+        let [a, b] = arr;   выделть част из массив == a = arr[0]; b = arr[1]
+
+        let [a, b, ...c] = arr; // a = 1; b = 2, c = [3, 5, 8, 13]
+
+    // Object = {
+        name: "Jamoliddin",
+        age: 20,
+        contry: 'tajikistan',
+        func: function(){
+            return `${this.name}, ${this.age}, this.country `
+        }
+    }
+
+    let {name, age, contry} = Object; \\ Перемени дольжен совпадать с ключи обекта
+
+    let {name, age, contry, func} = Object
+    .log(func.call(Object)) //  Запустить функция spread 
+
+    let {name = "Если нет имя в объект", age} = Object  // параметр поумолчания вставит значения поумолчания = "Если нет имя в объект" 
+
+    let newObject = {...Object, name:"js"} // раздельний скопировать объект 
+    Object.assign({one:"first"}, Object)
+
+}
