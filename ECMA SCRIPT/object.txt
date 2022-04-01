@@ -1,0 +1,20 @@
+ // Object = {
+        name: "Jamoliddin",
+        age: 20,
+        contry: 'tajikistan',
+        func: function(){
+            return `${this.name}, ${this.age}, this.country `
+        }
+    }
+
+    let {name, age, contry} = Object; \\ Перемени дольжен совпадать с ключи обекта
+
+    let {name, age, contry, func} = Object
+    .log(func.call(Object)) //  Запустить функция spread 
+
+    let {name = "Если нет имя в объект", age} = Object  // параметр поумолчания вставит значения поумолчания = "Если нет имя в объект" 
+
+    let newObject = {...Object, name:"js"} // раздельний скопировать объект 
+    Object.assign({one:"first"}, Object)
+
+}

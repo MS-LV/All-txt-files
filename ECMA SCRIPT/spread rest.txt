@@ -1,0 +1,26 @@
+// rest {
+
+    function everst(a, ...args){
+    return args.reduce((prvalue, value) => prvalue += i, 0) / args.length
+    }
+    everst(4, 3 , 5 , 4) => 3 + 5 + 4 / args.length(3) = 4;
+
+    // ...args => берет остальных аргументы и возвращает массив
+
+}
+
+
+// spread {
+    let arr = [1, 2, 3, 5, 8, 13]
+
+    let arr2 = [0, 1, ...arr, 21,34]; // коприроват с spread
+    Math.max(...arr) // найдите самый вышей номер
+}
+
+
+//destruction {
+    //Array =>
+        let arr = [1, 2, 3, 5, 8, 13]
+        let [a, b] = arr;   выделть част из массив == a = arr[0]; b = arr[1]
+
+        let [a, b, ...c] = arr; // a = 1; b = 2, c = [3, 5, 8, 13]

@@ -1,0 +1,33 @@
+//default option function
+    function show(a = 5, b = 7){
+        console.log(a + b)
+    }
+    show()  <----- log(12)
+
+    -----------------------
+
+    function show(a = 5, b = 7){
+        console.log(a + b)
+    }
+    show(10, 20)    <---- log(30)
+
+    --------------------------------
+
+    let as = 5;
+    let bs = 10;
+    function show(a = as, b = bs){
+        console.log(a + b)
+    }
+    show()  <------ log(15);
+
+    --------------------------------
+
+    let as = 5;
+    let bs = 15;
+    function show(a, b){
+        console.log(a + b)
+    }
+    show(as, bs);
+
+    ------------------------------
+    
