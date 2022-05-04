@@ -1,3 +1,4 @@
 npm init => // for create package.json
 npm i -g webpack webpack-cli => установит webpack
 npm install html-webpack-plugin => Плагины для webpack
+npm install clean-webpack-plugin => для очистит файлах
